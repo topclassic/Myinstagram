@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EF52A3DAE195CD236F908BF /* Pods_Myinstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2484C4C097DD06076C5F7B /* Pods_Myinstagram.framework */; };
+		3E27F3D51C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E27F3D11C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a */; };
+		3E27F3D61C9BC71A00AF8077 /* Kumulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E27F3D31C9BC71A00AF8077 /* Kumulos.m */; };
 		3E8D5E441C9A851E0003322E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D5E431C9A851E0003322E /* AppDelegate.swift */; };
 		3E8D5E461C9A851E0003322E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D5E451C9A851E0003322E /* ViewController.swift */; };
 		3E8D5E491C9A851E0003322E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8D5E471C9A851E0003322E /* Main.storyboard */; };
@@ -35,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E27F3D01C9BC71A00AF8077 /* Myinstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Myinstagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E27F3D11C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "Kumulos_ARMv7-Combined.a"; sourceTree = "<group>"; };
+		3E27F3D21C9BC71A00AF8077 /* Kumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kumulos.h; sourceTree = "<group>"; };
+		3E27F3D31C9BC71A00AF8077 /* Kumulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kumulos.m; sourceTree = "<group>"; };
+		3E27F3D41C9BC71A00AF8077 /* libKumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libKumulos.h; sourceTree = "<group>"; };
 		3E8D5E401C9A851E0003322E /* Myinstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myinstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8D5E431C9A851E0003322E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8D5E451C9A851E0003322E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF52A3DAE195CD236F908BF /* Pods_Myinstagram.framework in Frameworks */,
+				3E27F3D51C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +96,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3E27F3CF1C9BC66700AF8077 /* kumulosAPI */ = {
+			isa = PBXGroup;
+			children = (
+				3E27F3D11C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a */,
+				3E27F3D21C9BC71A00AF8077 /* Kumulos.h */,
+				3E27F3D31C9BC71A00AF8077 /* Kumulos.m */,
+				3E27F3D41C9BC71A00AF8077 /* libKumulos.h */,
+				3E27F3D01C9BC71A00AF8077 /* Myinstagram-Bridging-Header.h */,
+			);
+			name = kumulosAPI;
+			sourceTree = "<group>";
+		};
 		3E8D5E371C9A851E0003322E = {
 			isa = PBXGroup;
 			children = (
+				3E27F3CF1C9BC66700AF8077 /* kumulosAPI */,
 				3E8D5E421C9A851E0003322E /* Myinstagram */,
 				3E8D5E571C9A851E0003322E /* MyinstagramTests */,
 				3E8D5E621C9A851E0003322E /* MyinstagramUITests */,
@@ -332,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8D5E461C9A851E0003322E /* ViewController.swift in Sources */,
+				3E27F3D61C9BC71A00AF8077 /* Kumulos.m in Sources */,
 				3E8D5E441C9A851E0003322E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,10 +497,17 @@
 			baseConfigurationReference = 5A9E61E10D2E083820A49B37 /* Pods-Myinstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Myinstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = th.ac.dpu.Myinstagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Myinstagram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -487,10 +516,16 @@
 			baseConfigurationReference = B73344AB9F5E1FCACA30B4D9 /* Pods-Myinstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Myinstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = th.ac.dpu.Myinstagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Myinstagram-Bridging-Header.h";
 			};
 			name = Release;
 		};
