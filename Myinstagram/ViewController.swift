@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var textUsername: UITextField!
+    @IBOutlet weak var textPassword: UITextField!
+    @IBOutlet weak var textConfirm: UITextField!
+    @IBOutlet weak var textEmail: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func butSingup(sender: AnyObject) {
+        
+        if textPassword.text == textConfirm.text{
+            let kumulosAPI = Kumulos()
+            kumulosAPI.createUserWithUsername(textUsername.text, andPassword: textPassword.text, andEmail: textEmail.text, andAuthData: "test")
+        }
+        
+    }
 
+    
+    @IBAction func butCancel(sender: AnyObject) {
+        textUsername.text = ""
+        textPassword.text = ""
+        textConfirm.text = ""
+        textEmail.text = ""
+        
+    }
 }
 
