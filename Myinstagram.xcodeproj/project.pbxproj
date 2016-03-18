@@ -10,6 +10,8 @@
 		2EF52A3DAE195CD236F908BF /* Pods_Myinstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2484C4C097DD06076C5F7B /* Pods_Myinstagram.framework */; };
 		3E27F3D51C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E27F3D11C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a */; };
 		3E27F3D61C9BC71A00AF8077 /* Kumulos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E27F3D31C9BC71A00AF8077 /* Kumulos.m */; };
+		3E27F3D81C9BC87C00AF8077 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E27F3D71C9BC87C00AF8077 /* SystemConfiguration.framework */; };
+		3E27F3DA1C9BC89400AF8077 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E27F3D91C9BC89400AF8077 /* MobileCoreServices.framework */; };
 		3E8D5E441C9A851E0003322E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D5E431C9A851E0003322E /* AppDelegate.swift */; };
 		3E8D5E461C9A851E0003322E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D5E451C9A851E0003322E /* ViewController.swift */; };
 		3E8D5E491C9A851E0003322E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8D5E471C9A851E0003322E /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		3E27F3D21C9BC71A00AF8077 /* Kumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kumulos.h; sourceTree = "<group>"; };
 		3E27F3D31C9BC71A00AF8077 /* Kumulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kumulos.m; sourceTree = "<group>"; };
 		3E27F3D41C9BC71A00AF8077 /* libKumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libKumulos.h; sourceTree = "<group>"; };
+		3E27F3D71C9BC87C00AF8077 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3E27F3D91C9BC89400AF8077 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E8D5E401C9A851E0003322E /* Myinstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myinstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8D5E431C9A851E0003322E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8D5E451C9A851E0003322E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E27F3DA1C9BC89400AF8077 /* MobileCoreServices.framework in Frameworks */,
+				3E27F3D81C9BC87C00AF8077 /* SystemConfiguration.framework in Frameworks */,
 				2EF52A3DAE195CD236F908BF /* Pods_Myinstagram.framework in Frameworks */,
 				3E27F3D51C9BC71A00AF8077 /* Kumulos_ARMv7-Combined.a in Frameworks */,
 			);
@@ -165,6 +171,8 @@
 		ADC0CCAA114049C06FAEF4BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E27F3D91C9BC89400AF8077 /* MobileCoreServices.framework */,
+				3E27F3D71C9BC87C00AF8077 /* SystemConfiguration.framework */,
 				BA2484C4C097DD06076C5F7B /* Pods_Myinstagram.framework */,
 			);
 			name = Frameworks;
